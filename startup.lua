@@ -1,12 +1,12 @@
 local colors = require('colors')
 local component = require('component')
-local button = require('../reactlua/lib/button')
-local GUIBackground = require('../reactlua/lib/GUIBackground')
+local button = require('/reactlua/lib/button')
+local GUIBackground = require('/reactlua/lib/GUIBackground')
 local gpu = component.gpu
 local w, h = gpu.getResolution()
 local event = require('event')
-local blink = require('../reactlua/lib/blink')
-require('../reactlua/db/buttons')
+local blink = require('/reactlua/lib/blink')
+require('/reactlua/db/buttons')
 
 GUIBackground.set()
 
