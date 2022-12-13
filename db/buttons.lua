@@ -1,22 +1,27 @@
 local component = require('component')
 local gpu = component.gpu
 local w, h = gpu.getResolution()
+local menu = require('../lib/menu')
 
 _G.btn = { 
-    {
+    {   
         X = 1,
         Y = 1,
-        W = 1,
+        W = 2,
         H = 1,
-        text = "☰",
+        text = "☰☰",
         textColor = 0x000000,
-        color = 0xFFFFFF
+        color = 0xFFFFFF,
+
+        action = function()
+            menu.set()
+        end
 
     },
     {
-        X = w,
+        X = w-1,
         Y = 1,
-        W = 1,
+        W = 2,
         H = 1,
         text = "◱",
         textColor = 0x000000,
@@ -25,7 +30,7 @@ _G.btn = {
         action = function()
             gpu.setBackground(0x000000)
             gpu.setForeground(0xFFFFFF)
-            gpu.fill(1, 1, W, H, ' ')
+            gpu.fill(1, 1, w, h, " ")
             os.exit()
         end
     },
