@@ -4,6 +4,10 @@ local width, height = gpu.getResolution()
 
 local GUIBackground={}
 
+function GUIBackground.up_menu()
+
+end
+
 function GUIBackground.set()
  
   gpu.setBackground(0xFFFFFF)
