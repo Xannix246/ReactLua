@@ -45,7 +45,7 @@ function GUIBackground.set()
 end
 
 function GUIBackground.GUIError()
-  gpu.setBackground(gpu.setBackground(gpu.getBackground()))
+  gpu.setBackground(0xFFFFFF)
   gpu.setForeground(0x333333)
   gpu.fill((width/2)-w+1, (height/2)-h+(height/4-1), width/2, 1, pixel_up)
   gpu.fill((width/2)-w+1, (height/2)-h, width/2, 1, pixel)
