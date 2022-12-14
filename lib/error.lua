@@ -16,7 +16,7 @@ function err.set(err1)
         try {
             function()
                 GUIBackground.GUIError()
-                gpu.setForeground(0x000000)
+                gpu.setForeground(0xFF0000)
                 gpu.set((width/2-w+3), (height/2)-h*0.4, "Error: " .. err1)
                 button.set(e_btn[1].X, e_btn[1].Y, e_btn[1].W, e_btn[1].H, e_btn[1].text, e_btn[1].textColor, e_btn[1].color)
                 while true do
