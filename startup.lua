@@ -39,6 +39,7 @@ while true do
         catch {
            function(error)
                 err.set(error)
+                error_visible=true
            end
         }
     }
