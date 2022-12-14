@@ -6,6 +6,7 @@ local gpu = component.gpu
 local w, h = gpu.getResolution()
 local event = require('event')
 local blink = require('/lib/blink')
+require('/db/error_buttons')
 local err = require('/lib/error')
 require('/db/buttons')
 require('/lib/try-catch')
@@ -38,8 +39,8 @@ while true do
      
         catch {
            function(error)
-                err.set(error)
                 error_visible=true
+                err.set(error)
            end
         }
     }
