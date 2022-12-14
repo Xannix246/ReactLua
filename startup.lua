@@ -24,18 +24,20 @@ end
 while true do
 
     try {
-        local click = {event.pull('touch')}
-        for i=1, #btn do
-            if click[3] >= btn[i].X and click[3] <= btn[i].X+btn[i].W and click[4] >= btn[i].Y and click[4] <= btn[i].Y+btn[i].H then
-                blink.set(btn[i].X, btn[i].Y, btn[i].W, btn[i].H, btn[i].text, btn[i].textColor, btn[i].color)
-                btn[i].action()
-                break 
+        function()
+            local click = {event.pull('touch')}
+            for i=1, #btn do
+                if click[3] >= btn[i].X and click[3] <= btn[i].X+btn[i].W and click[4] >= btn[i].Y and click[4] <= btn[i].Y+btn[i].H then
+                    blink.set(btn[i].X, btn[i].Y, btn[i].W, btn[i].H, btn[i].text, btn[i].textColor, btn[i].color)
+                    btn[i].action()
+                    break 
+                end
             end
         end,
      
         catch {
            function(error)
-              print('caught error: ' .. error .. ' хуй')
+              
            end
         }
     }

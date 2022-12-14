@@ -39,4 +39,22 @@ function GUIBackground.set()
   gpu.setForeground(0x000000)
 end
 
+function GUIError()
+  gpu.setBackground(gpu.setBackground(gpu.getBackground()))
+  gpu.setForeground(0x333333)
+  gpu.fill((width/2)-w+1, (height/2)-h+(height/4-1), width/2, 1,pixel_up)
+  gpu.fill((width/2)-w+1, (height/2)-h, width/2, 1, pixel)
+  gpu.setBackground(0x333333)
+  gpu.fill((width/2)-w+1, (height/2)-h+1, width/2, height/4-1, " ")
+
+  gpu.setBackground(0xBBBBBB)
+  gpu.fill((width/2)-w, (height/2)-h, width/2, height/4, " ")
+
+  gpu.setBackground(0xCFCFCF)
+  gpu.fill((width/2)-w, (height/2)-h, width/2, 2, " ")
+  gpu.setForeground(0x000000)
+  gpu.fill((width/2)-w, (height/2)-h+1, width/2, 1, "_")
+  gpu.set((width/2-9), (height/2)-h, "Error!")
+end
+
 return GUIBackground
