@@ -13,8 +13,8 @@ local err={}
 
 function err.set(err1)
     if error_visible then
-        --try {
-            --function()
+        try {
+            function()
                 GUIBackground.GUIError()
                 gpu.setForeground(0x000000)
                 gpu.set((width/2-w+3), (height/2)-h*0.4, "Error: " .. err1)
@@ -28,16 +28,16 @@ function err.set(err1)
                     end
                 end
 
-            --end,
-            --catch {
-            --    function(error)
-            --        gpu.setBackground(0x000000)
-            --        gpu.setForeground(0xFFFFFF)
-            --        gpu.fill(1, 1, w, h, " ")
-            --        os.exit()
-            --    end
-            --}
-        --}
+            end,
+            catch {
+                function(error)
+                    gpu.setBackground(0x000000)
+                    gpu.setForeground(0xFFFFFF)
+                    gpu.fill(1, 1, w, h, " ")
+                    os.exit()
+                end
+            }
+        }
     else
         GUIBackground.set()
         local function buttons(n)
