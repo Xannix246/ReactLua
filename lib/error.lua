@@ -1,3 +1,4 @@
+local component = require('component')
 local GUIBackground = require('../lib/GUIBackground')
 local gpu = component.gpu
 local width, height = gpu.getResolution()
