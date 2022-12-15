@@ -12,6 +12,7 @@ require('/db/buttons')
 require('/lib/try-catch')
 
 GUIBackground.set()
+GUIBackground.GUIMenu()
 
 local function buttons(n)
     button.set(btn[n].X, btn[n].Y, btn[n].W, btn[n].H, btn[n].text, btn[n].textColor, btn[n].color)

@@ -18,16 +18,6 @@ function GUIBackground.set()
   gpu.setBackground(0xFFFFFF)
     gpu.fill(1, 3, width, height, " ")
   
-  gpu.setBackground(0x4169E1)
-    gpu.fill(1, 1, width, 2, " ")
-  
-  gpu.setBackground(0xFFFF01)
-    gpu.fill(1, 3, width, 2, " ")
-  
-  gpu.setBackground(0x000000)
-  gpu.setForeground(0xFFFFFF)
-    gpu.set(width/2-6, 1, "ReactLua GUI")
-  
   gpu.setBackground(0x00FF7F)
     gpu.fill(1, height-4, width, 5, " ")
   
@@ -37,11 +27,22 @@ function GUIBackground.set()
   
   gpu.setBackground(0x4169E1)
     gpu.fill(1, 2, width, 1, "▁")
-  
-  gpu.setBackground(0xFFFF01)
-    gpu.fill(1, 4, width, 1, "▁")
     
   gpu.setForeground(0x000000)
+end
+
+function GUIBackground.GUIMenu()
+  gpu.setBackground(0x4169E1)
+  gpu.fill(1, 1, width, 2, " ")
+
+  gpu.setBackground(0xFFFF01)
+    gpu.fill(1, 3, width, 2, " ")
+
+  gpu.setBackground(0x000000)
+  gpu.setForeground(0xFFFFFF)
+    gpu.set(width/2-6, 1, "ReactLua GUI")
+    gpu.setBackground(0xFFFF01)
+    gpu.fill(1, 4, width, 1, "▁")
 end
 
 function GUIBackground.GUIError()
