@@ -2,7 +2,6 @@ local component = require('component')
 local gpu = component.gpu
 local GUIBackground = require('../lib/GUIBackground')
 local button = require('../lib/button')
-require('../RCL_files/explorer/db_exp/exp_buttons')
 local notopen = true
 
 local exp_menu={}

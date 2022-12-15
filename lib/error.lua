@@ -8,6 +8,7 @@ local w, h = width/4, height/6
 _G.error_visible=false
 local event = require('event')
 local blink = require('/lib/blink')
+local computer = require('computer')
 
 local err={}
 
@@ -19,6 +20,7 @@ function err.set(err1)
                 gpu.setForeground(0xFF0000)
                 gpu.set((width/2-w+3), (height/2)-h*0.4, "Error: " .. err1)
                 button.set(e_btn[1].X, e_btn[1].Y, e_btn[1].W, e_btn[1].H, e_btn[1].text, e_btn[1].textColor, e_btn[1].color)
+                computer.beep(1000, 0.5)
                 while true do
                     local click = {event.pull('touch')}
                     if click[3] >= e_btn[1].X and click[3] <= e_btn[1].X+7 and click[4] >= e_btn[1].Y and click[4] <= e_btn[1].Y then
@@ -31,10 +33,10 @@ function err.set(err1)
             end,
             catch {
                 function(error)
+                    os.exit()
                     gpu.setBackground(0x000000)
                     gpu.setForeground(0xFFFFFF)
                     gpu.fill(1, 1, w, h, " ")
-                    os.exit()
                 end
             }
         }

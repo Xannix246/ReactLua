@@ -1,7 +1,7 @@
 local component = require('component')
 local gpu = component.gpu
 require('../lib/program')
-require('../RCL_files/explorer/db_exp/exp_buttons')
+require('/db_exp/exp_buttons')
 
 local explorer = {}
 

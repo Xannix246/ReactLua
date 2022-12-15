@@ -3,7 +3,7 @@ local gpu = component.gpu
 local w, h = gpu.getResolution()
 local button = require('../lib/button')
 
-exp_btn = { 
+_G.exp_btn = { 
     {   
         X = 1,
         Y = 1,
