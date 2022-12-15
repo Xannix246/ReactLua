@@ -1,15 +1,8 @@
 -- находится по пути ../reactlua кста
-autorun = {
-    {
-        name = "explorer",
-    },
-    {
-        name = "",
-    }
-}
+require('db/autorun_files')
 
 function autorun_p()
-    for i, #autorun do
+    for i=1, #autorun do
         local program = require('RCL_files/' .. autorun[i])
         program.autorun[i]()
     end
