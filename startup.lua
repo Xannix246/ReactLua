@@ -48,4 +48,15 @@ while true do
     }
 end
 
-autorun_p()
+try {
+    function()
+        autorun_p()
+    end
+
+    catch {
+        function(error)
+            error_visible=true
+            err.set(error)
+        end
+    }
+}
