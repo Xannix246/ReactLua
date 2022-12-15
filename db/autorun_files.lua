@@ -1,8 +1,8 @@
-_G.autorun = {
+autorun = {
     {
-        name = "explorer"
+        name = "explorer",
     },
     {
-        name = ""
+        name = "",
     }
 }
