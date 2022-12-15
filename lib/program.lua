@@ -5,7 +5,7 @@ local button = require('../lib/button')
 local notopen = true
 x, y = 1, 5
 w, h = gpu.getResolution()
-width, height = w, h-15
+width, height = w, h-10
 
 local program={}
 

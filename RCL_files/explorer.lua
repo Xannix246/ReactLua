@@ -5,8 +5,8 @@ require('../lib/program')
 local explorer = {}
 
 function explorer.set()
-    gpu.setBackgrouns(0x000000)
-    gpu.fill(x, y, w, h, " ")
+    gpu.setBackground(0x000000)
+    gpu.fill(x, y, width, height, " ")
 end
 
 return explorer
