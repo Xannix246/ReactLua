@@ -41,7 +41,8 @@ function GUIBackground.GUIMenu()
   gpu.setBackground(0x000000)
   gpu.setForeground(0xFFFFFF)
     gpu.set(width/2-6, 1, "ReactLua GUI")
-    gpu.setBackground(0xFFFF01)
+  gpu.setBackground(0xFFFF01)
+  gpu.setForeground(0x000000)
     gpu.fill(1, 4, width, 1, "▁")
 end
 
