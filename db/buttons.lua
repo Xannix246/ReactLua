@@ -2,7 +2,7 @@ local component = require('component')
 local gpu = component.gpu
 local w, h = gpu.getResolution()
 local menu = require('../lib/menu')
-local autorun_p = require('autorun')
+local autorun = require('autorun')
 
 _G.btn = { 
     {   
@@ -44,8 +44,8 @@ _G.btn = {
         textColor = 0x000000,
         color = 0xFFFF01,
 
-        action = function
-            autorun_p.set()
+        action = function()
+            autorun.set()
         end
     },
     {
