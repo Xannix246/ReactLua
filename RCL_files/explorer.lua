@@ -1,5 +1,6 @@
 local component = require('component')
 local gpu = component.gpu
+require('../lib/program')
 
 local explorer = {}
 

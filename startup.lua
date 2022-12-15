@@ -10,6 +10,7 @@ require('/db/error_buttons')
 local err = require('/lib/error')
 require('/db/buttons')
 require('/lib/try-catch')
+require('db/autorun_files')
 require('autorun')
 
 GUIBackground.set()
