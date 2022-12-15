@@ -51,7 +51,7 @@ end
 try {
     function()
         autorun_p()
-    end
+    end,
 
     catch {
         function(error)
