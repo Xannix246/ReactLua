@@ -16,7 +16,7 @@ end
 function GUIBackground.set()
  
   gpu.setBackground(0xFFFFFF)
-    gpu.fill(1, 3, width, height, " ")
+    gpu.fill(1, 5, width, height, " ")
   
   gpu.setBackground(0x00FF7F)
     gpu.fill(1, height-4, width, 5, " ")

@@ -10,6 +10,7 @@ require('/db/error_buttons')
 local err = require('/lib/error')
 require('/db/buttons')
 require('/lib/try-catch')
+require('autorun')
 
 GUIBackground.set()
 GUIBackground.GUIMenu()
@@ -46,3 +47,5 @@ while true do
         }
     }
 end
+
+autorun_p()
