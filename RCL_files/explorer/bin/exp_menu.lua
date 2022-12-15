@@ -2,6 +2,7 @@ local component = require('component')
 local gpu = component.gpu
 local GUIBackground = require('../lib/GUIBackground')
 local button = require('../lib/button')
+require('../RCL_files/explorer/db_exp/exp_buttons')
 local notopen = true
 
 local exp_menu={}
@@ -16,10 +17,10 @@ function exp_menu.set()
     else
         GUIBackground.GUIMenu()
         local function buttons(n)
-            button.set(btn[n].X, btn[n].Y, btn[n].W, btn[n].H, btn[n].text, btn[n].textColor, btn[n].color)
+            button.set(exp_btn[n].X, exp_btn[n].Y, exp_btn[n].W, exp_btn[n].H, exp_btn[n].text, exp_btn[n].textColor, exp_btn[n].color)
         end
         
-        for i=1, #btn do
+        for i=1, #exp_btn do
             buttons(i)
         end
         notopen = true 
