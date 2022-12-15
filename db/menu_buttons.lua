@@ -14,7 +14,6 @@ _G.m_btn = {
 
         action = function()
             menu.set()
-            GUIBackground.GUIMenu()
         end
 
     },

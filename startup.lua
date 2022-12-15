@@ -46,17 +46,17 @@ while true do
            end
         }
     }
-end
 
-try {
-    function()
-        autorun_p()
-    end,
-
-    catch {
-        function(error)
-            error_visible=true
-            err.set(error)
-        end
+    try {
+        function()
+            autorun_p()
+        end,
+    
+        catch {
+            function(error)
+                error_visible=true
+                err.set(error)
+            end
+        }
     }
-}
+end
