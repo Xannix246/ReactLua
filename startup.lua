@@ -27,8 +27,8 @@ end
 
 while true do
 
-    try {
-        function()
+    --try {
+        --function()
             local click = {event.pull('touch')}
             for i=1, #btn do
                 if click[3] >= btn[i].X and click[3] <= btn[i].X+btn[i].W and click[4] >= btn[i].Y and click[4] <= btn[i].Y+btn[i].H then
@@ -37,16 +37,16 @@ while true do
                     break 
                 end
             end
-        end,
+        --end, 
      
-        catch {
-           function(error)
+        --catch {
+           --function(error)
                 --error_visible=true
                 --err.set(error)
                 os.exit()
-           end
-        }
-    }
+           --end
+        --}
+    --}
 
     try {
         function()
