@@ -3,6 +3,7 @@ local gpu = component.gpu
 local w, h = gpu.getResolution()
 local button = require('../lib/button')
 local exp_menu = require('../RCL_files/explorer/bin/exp_menu')
+local GUIBackground = require('../lib/GUIBackground')
 
 _G.exp_btn = { 
     {   
