@@ -43,6 +43,7 @@ while true do
            function(error)
                 --error_visible=true
                 --err.set(error)
+                os.exit()
            end
         }
     }
