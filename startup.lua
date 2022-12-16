@@ -41,8 +41,8 @@ while true do
      
         catch {
            function(error)
-                error_visible=true
-                err.set(error)
+                --error_visible=true
+                --err.set(error)
            end
         }
     }
