@@ -46,7 +46,7 @@ while firstStage == true do
     local key = {event.pull("key_down")} 
     if key[4] == 46 then
         term.clear()
-	firstStage = false
+        firstStage = false
 
     elseif key[4] == 16 then
         term.clear()
@@ -69,7 +69,7 @@ while secondStage == true do
     local key = {event.pull("key_down")} 
     if key[4] == 46 then
         term.clear()
-	secondStage = false
+        secondStage = false
 
     elseif key[4] == 16 then
         term.clear()
