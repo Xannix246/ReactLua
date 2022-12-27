@@ -2,7 +2,7 @@ local component = require('component')
 local gpu = component.gpu
 local w, h = gpu.getResolution()
 local menu = require('../lib/menu')
-local autorun = require('autorun')
+local autorun = require('../autorun')
 
 _G.btn = { 
     {   
